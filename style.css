@@ -1,0 +1,283 @@
+/* General styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'SF Pro Text', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+a {
+  color: #0070c9;
+}
+
+a:hover {
+  color: #2d70d5;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav .logo {
+  margin-right: auto;
+}
+
+nav .nav-links {
+  display: none;
+}
+
+nav .nav-links li {
+  display: block;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  nav .logo {
+    margin-right: 0;
+  }
+
+  nav .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+  }
+
+  nav .nav-links li {
+    display: inline-block;
+    margin-left: 40px;
+    padding-left: 40px;
+    position: relative;
+    font-weight: 600;
+  }
+
+  nav .nav-links li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  nav .nav-links li a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  nav .nav-links li a:hover {
+    color: #b3b3b3;
+  }
+
+  nav .nav-links li ul.submenu {
+    display: none;
+    width: 150px;
+    position: absolute;
+    background-color: #efefef;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    left: 0;
+    top: 50px;
+    z-index: 100;
+  }
+
+  nav .nav-links li:hover ul.submenu {
+    display: block;
+  }
+
+  nav .nav-links li ul.submenu li {
+    display: block;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  nav .nav-links li ul.submenu li a {
+    font-size: 13px;
+    padding: 10px;
+    color: black;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* Hero section */
+.hero {
+  background-color: #0070c9;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.hero button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 18px;
+  padding: 15px 50px;
+  border-radius: 50px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: white;
+  color: #0070c9;
+}
+
+/* Products section */
+.products {
+  padding: 100px 20px;
+}
+
+.products h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+
+.product-item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.products h3 {
+  font-size: 24px;
+ 
+  margin-bottom: 10px;
+}
+
+.products p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.product-item button {
+  background-color: #0070c9;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 50px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #2d70d5;
+}
+
+/* Media section */
+.media {
+  padding: 100px 20px;
+}
+
+.media h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+
+.media-item {
+  position: relative;
+}
+
+.media-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.media-item p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 30px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #0070c9;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  nav .menu {
+    display: none;
+  }
+}
